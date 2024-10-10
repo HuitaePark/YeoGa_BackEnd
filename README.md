@@ -1,4 +1,4 @@
-# 여가
+# 숙소 기반 여행코스 추천 사이트 "여가"
 
 <!--배지-->
 ![MIT License][license-shield] ![Repository Size][repository-size-shield] ![Issue Closed][issue-closed-shield]
