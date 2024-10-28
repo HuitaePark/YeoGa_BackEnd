@@ -1,5 +1,6 @@
 package com.example.yeoga.openapi;
 
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,7 @@ import java.nio.charset.StandardCharsets;
 @CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api")
 public class GeocoderController {
+
     private final RestTemplate restTemplate;
 
     // 프로퍼티 값을 주입받는 필드
@@ -22,6 +24,7 @@ public class GeocoderController {
 
     @Value("${VWORLD_API_BASE_URL}")
     private String baseUrl;
+
 
     public GeocoderController(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
@@ -68,7 +71,7 @@ public class GeocoderController {
      * @param simple     응답 간략 출력 여부 (기본값: false)
      * @return 좌표 정보 또는 에러 메시지
      */
-    @GetMapping("/geocode")
+    @GetMapping("/geocode/advanced")
     public ResponseEntity<String> advancedGeocode(
             @RequestParam String address,
             @RequestParam(defaultValue = "ROAD") String type,
